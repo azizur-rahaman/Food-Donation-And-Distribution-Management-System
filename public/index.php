@@ -23,6 +23,27 @@ switch ($path) {
         include __DIR__ . '/../app/views/admin/distribution.php';
         break;
         
+    case '/approve-users':
+    case '/admin/approve-users':
+        include __DIR__ . '/../app/views/admin/approve-users.php';
+        break;
+        
+    case '/centers':
+    case '/distribution-centers':
+    case '/admin/centers':
+        include __DIR__ . '/../app/views/admin/centers.php';
+        break;
+        
+    case '/reports':
+    case '/admin/reports':
+        include __DIR__ . '/../app/views/admin/reports.php';
+        break;
+        
+    case '/waste-reduction':
+    case '/admin/waste-reduction':
+        include __DIR__ . '/../app/views/admin/waste-reduction.php';
+        break;
+        
     case '/components':
         include __DIR__ . '/../app/views/components/component-library.html';
         break;

@@ -82,6 +82,16 @@
     color: var(--color-info);
 }
 
+.badge--primary {
+    background: rgba(45, 106, 79, 0.1);
+    color: var(--color-primary);
+}
+
+.badge--secondary {
+    background: var(--color-gray-200);
+    color: var(--color-gray-700);
+}
+
 /* Filter Bar */
 .filter-bar {
     background: var(--color-white);
