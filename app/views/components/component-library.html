@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Library - Food Donation Management System</title>
+    <link rel="stylesheet" href="/assets/css/components/reset.css">
+    <link rel="stylesheet" href="/assets/css/components/variables.css">
+    <link rel="stylesheet" href="/assets/css/components/button.css">
+    <link rel="stylesheet" href="/assets/css/components/form.css">
+    <link rel="stylesheet" href="/assets/css/components/card.css">
+    <link rel="stylesheet" href="/assets/css/components/modal.css">
+    <link rel="stylesheet" href="/assets/css/components/table.css">
+    <link rel="stylesheet" href="/assets/css/components/stats-card.css">
+    <style>
+        body {
+            font-family: var(--font-family-base);
+            background: var(--color-gray-50);
+            padding: var(--spacing-2xl);
+        }
+        .component-section {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+            box-shadow: var(--shadow-md);
+        }
+        .component-title {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-gray-900);
+            margin-bottom: var(--spacing-lg);
+            padding-bottom: var(--spacing-lg);
+            border-bottom: 2px solid var(--color-primary);
+        }
+        .component-demo {
+            margin-bottom: var(--spacing-xl);
+        }
+        .demo-label {
+            font-size: var(--font-size-sm);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-gray-700);
+            margin-bottom: var(--spacing-md);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: var(--spacing-md);
+        }
+        .color-swatch {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid var(--color-gray-200);
+        }
+        .color-swatch__color {
+            height: 80px;
+        }
+        .color-swatch__info {
+            padding: var(--spacing-sm);
+            background: var(--color-white);
+        }
+        .color-swatch__name {
+            font-size: var(--font-size-xs);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-gray-900);
+        }
+        .color-swatch__value {
+            font-size: var(--font-size-xs);
+            color: var(--color-gray-600);
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div style="max-width: 1200px; margin: 0 auto;">
+        <h1 style="font-size: 3rem; font-weight: bold; color: var(--color-primary); margin-bottom: var(--spacing-2xl);">
+            Component Library
+        </h1>
+
+        <!-- Color Palette -->
+        <section class="component-section">
+            <h2 class="component-title">Color Palette</h2>
+            
+            <div class="component-demo">
+                <div class="demo-label">Primary Colors</div>
+                <div class="color-palette">
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #2D6A4F;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Primary</div>
+                            <div class="color-swatch__value">#2D6A4F</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #40916C;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Primary Light</div>
+                            <div class="color-swatch__value">#40916C</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #52B788;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Secondary</div>
+                            <div class="color-swatch__value">#52B788</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Status Colors</div>
+                <div class="color-palette">
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #52B788;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Success</div>
+                            <div class="color-swatch__value">#52B788</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #FFB703;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Warning</div>
+                            <div class="color-swatch__value">#FFB703</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #E63946;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Danger</div>
+                            <div class="color-swatch__value">#E63946</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-swatch__color" style="background: #3B82F6;"></div>
+                        <div class="color-swatch__info">
+                            <div class="color-swatch__name">Info</div>
+                            <div class="color-swatch__value">#3B82F6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="component-section">
+            <h2 class="component-title">Buttons</h2>
+            
+            <div class="component-demo">
+                <div class="demo-label">Button Variants</div>
+                <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                    <button class="btn btn--primary">Primary Button</button>
+                    <button class="btn btn--secondary">Secondary Button</button>
+                    <button class="btn btn--outline">Outline Button</button>
+                    <button class="btn btn--ghost">Ghost Button</button>
+                    <button class="btn btn--danger">Danger Button</button>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Button Sizes</div>
+                <div style="display: flex; gap: var(--spacing-md); align-items: center; flex-wrap: wrap;">
+                    <button class="btn btn--primary btn--sm">Small</button>
+                    <button class="btn btn--primary">Default</button>
+                    <button class="btn btn--primary btn--lg">Large</button>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Icon Buttons</div>
+                <div style="display: flex; gap: var(--spacing-md);">
+                    <button class="btn-icon">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 3C5 3 1.73 6.11 1 10c.73 3.89 4 7 9 7s8.27-3.11 9-7c-.73-3.89-4-7-9-7z" fill="currentColor"/>
+                        </svg>
+                    </button>
+                    <button class="btn-icon">
+                        <svg width="18" height="18" viewBox="0 0 20 20" fill="none">
+                            <path d="M11 5L6 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="component-section">
+            <h2 class="component-title">Form Elements</h2>
+            
+            <div class="component-demo">
+                <div class="demo-label">Text Input</div>
+                <div class="form-group" style="max-width: 400px;">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="Enter your email">
+                    <span class="form-help">We'll never share your email with anyone else.</span>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Select</div>
+                <div class="form-group" style="max-width: 400px;">
+                    <label class="form-label">Select Option</label>
+                    <select class="form-select">
+                        <option>Option 1</option>
+                        <option>Option 2</option>
+                        <option>Option 3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Textarea</div>
+                <div class="form-group" style="max-width: 400px;">
+                    <label class="form-label">Message</label>
+                    <textarea class="form-textarea" placeholder="Enter your message"></textarea>
+                </div>
+            </div>
+
+            <div class="component-demo">
+                <div class="demo-label">Switch</div>
+                <div class="form-switch">
+                    <input type="checkbox" id="switch1">
+                    <label for="switch1">Enable notifications</label>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="component-section">
+            <h2 class="component-title">Cards</h2>
+            
+            <div class="component-demo">
+                <div class="demo-label">Basic Card</div>
+                <div class="card" style="max-width: 400px;">
+                    <div class="card__header">
+                        <h3 class="card__title">Card Title</h3>
+                        <p class="card__subtitle">Card subtitle text</p>
+                    </div>
+                    <div class="card__body">
+                        <p style="color: var(--color-gray-600);">
+                            This is the card body content. You can put any content here.
+                        </p>
+                    </div>
+                    <div class="card__footer">
+                        <button class="btn btn--primary">Action</button>
+                        <button class="btn btn--outline">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Badges -->
+        <section class="component-section">
+            <h2 class="component-title">Badges</h2>
+            
+            <div class="component-demo">
+                <div class="demo-label">Badge Variants</div>
+                <div style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                    <span class="badge badge--success">Success</span>
+                    <span class="badge badge--warning">Warning</span>
+                    <span class="badge badge--danger">Danger</span>
+                    <span class="badge badge--info">Info</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alerts -->
+        <section class="component-section">
+            <h2 class="component-title">Alerts</h2>
+            
+            <div class="component-demo">
+                <div class="alert alert--success">
+                    <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                    </svg>
+                    <div class="alert__content">
+                        <div class="alert__title">Success!</div>
+                        <div class="alert__message">Your action has been completed successfully.</div>
+                    </div>
+                </div>
+
+                <div class="alert alert--warning">
+                    <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM9 7a1 1 0 012 0v4a1 1 0 11-2 0V7zm1 8a1 1 0 100-2 1 1 0 000 2z"/>
+                    </svg>
+                    <div class="alert__content">
+                        <div class="alert__title">Warning</div>
+                        <div class="alert__message">Please review your information before proceeding.</div>
+                    </div>
+                </div>
+
+                <div class="alert alert--danger">
+                    <svg class="alert__icon" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/>
+                    </svg>
+                    <div class="alert__content">
+                        <div class="alert__title">Error</div>
+                        <div class="alert__message">There was an error processing your request.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="component-section">
+            <h2 class="component-title">Typography</h2>
+            
+            <div class="component-demo">
+                <h1 style="font-size: var(--font-size-4xl); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-md);">Heading 1</h1>
+                <h2 style="font-size: var(--font-size-3xl); font-weight: var(--font-weight-bold); margin-bottom: var(--spacing-md);">Heading 2</h2>
+                <h3 style="font-size: var(--font-size-2xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-md);">Heading 3</h3>
+                <h4 style="font-size: var(--font-size-xl); font-weight: var(--font-weight-semibold); margin-bottom: var(--spacing-md);">Heading 4</h4>
+                <p style="font-size: var(--font-size-base); color: var(--color-gray-700); line-height: 1.6;">
+                    This is a paragraph of body text. It demonstrates the default font size and line height used throughout the application.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

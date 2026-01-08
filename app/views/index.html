@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Module - Documentation Hub</title>
+    <link rel="stylesheet" href="/assets/css/components/reset.css">
+    <link rel="stylesheet" href="/assets/css/components/variables.css">
+    <style>
+        body {
+            font-family: var(--font-family-base);
+            background: linear-gradient(135deg, #2D6A4F 0%, #40916C 100%);
+            min-height: 100vh;
+            padding: var(--spacing-2xl);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: var(--spacing-3xl);
+        }
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .header p {
+            font-size: 1.25rem;
+            opacity: 0.95;
+        }
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        .nav-card {
+            background: white;
+            border-radius: 16px;
+            padding: var(--spacing-2xl);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .nav-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .nav-card__icon {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        .nav-card__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2D6A4F;
+            margin-bottom: var(--spacing-sm);
+        }
+        .nav-card__description {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: var(--spacing-lg);
+        }
+        .nav-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            color: #52B788;
+            font-weight: 600;
+            font-size: 0.875rem;
+        }
+        .stats-bar {
+            background: white;
+            border-radius: 16px;
+            padding: var(--spacing-xl);
+            margin-bottom: var(--spacing-2xl);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            text-align: center;
+        }
+        .stat {
+            padding: var(--spacing-lg);
+            border-right: 1px solid #e5e7eb;
+        }
+        .stat:last-child {
+            border-right: none;
+        }
+        .stat__value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2D6A4F;
+            margin-bottom: var(--spacing-xs);
+        }
+        .stat__label {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: var(--spacing-3xl);
+            padding-top: var(--spacing-xl);
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+            .stat {
+                border-right: none;
+                border-bottom: 1px solid #e5e7eb;
+                padding-bottom: var(--spacing-lg);
+            }
+            .stat:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍃 Food Donation Management System</h1>
+            <p>Admin Module - Component-Based Architecture</p>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat__value">20+</div>
+                    <div class="stat__label">Components</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">13</div>
+                    <div class="stat__label">CSS Files</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">3</div>
+                    <div class="stat__label">Page Templates</div>
+                </div>
+                <div class="stat">
+                    <div class="stat__value">100%</div>
+                    <div class="stat__label">Responsive</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            <!-- Dashboard -->
+            <a href="admin/dashboard.php" class="nav-card">
+                <div class="nav-card__icon">🏠</div>
+                <h2 class="nav-card__title">Dashboard</h2>
+                <p class="nav-card__description">
+                    Main admin dashboard with statistics, charts, and overview of donations and meals served.
+                </p>
+                <span class="nav-card__link">
+                    View Dashboard →
+                </span>
+            </a>
+
+            <!-- Distribution -->
+            <a href="admin/distribution.php" class="nav-card">
+                <div class="nav-card__icon">🚚</div>
+                <h2 class="nav-card__title">Distribution</h2>
+                <p class="nav-card__description">
+                    Manage food distribution to NGOs with filtering, status tracking, and detailed tables.
+                </p>
+                <span class="nav-card__link">
+                    View Distribution →
+                </span>
+            </a>
+
+            <!-- Component Library -->
+            <a href="components/component-library.html" class="nav-card">
+                <div class="nav-card__icon">🎨</div>
+                <h2 class="nav-card__title">Component Library</h2>
+                <p class="nav-card__description">
+                    Visual documentation of all UI components with live examples and code snippets.
+                </p>
+                <span class="nav-card__link">
+                    Browse Components →
+                </span>
+            </a>
+
+            <!-- Architecture Diagram -->
+            <a href="components/architecture-diagram.html" class="nav-card">
+                <div class="nav-card__icon">🏗️</div>
+                <h2 class="nav-card__title">Architecture</h2>
+                <p class="nav-card__description">
+                    Visual overview of the component architecture showing layers and relationships.
+                </p>
+                <span class="nav-card__link">
+                    View Architecture →
+                </span>
+            </a>
+
+            <!-- Documentation -->
+            <div class="nav-card" style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);">
+                <div class="nav-card__icon">📚</div>
+                <h2 class="nav-card__title">Documentation</h2>
+                <p class="nav-card__description">
+                    Complete guides and references for using the component system.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+                    <a href="../../../QUICK_START.md" class="nav-card__link">Quick Start Guide →</a>
+                    <a href="../../../ADMIN_MODULE_README.md" class="nav-card__link">Component Documentation →</a>
+                    <a href="../../../PROJECT_SUMMARY.md" class="nav-card__link">Project Summary →</a>
+                </div>
+            </div>
+
+            <!-- What's Included -->
+            <div class="nav-card" style="background: linear-gradient(135deg, #D8F3DC 0%, #B7E4C7 100%);">
+                <div class="nav-card__icon">✨</div>
+                <h2 class="nav-card__title">What's Included</h2>
+                <p class="nav-card__description" style="margin-bottom: 16px;">
+                    Everything you need to build beautiful admin interfaces:
+                </p>
+                <ul style="list-style: none; padding: 0; color: #2D6A4F;">
+                    <li style="padding: 6px 0;">✓ Complete Design System</li>
+                    <li style="padding: 6px 0;">✓ Reusable Components</li>
+                    <li style="padding: 6px 0;">✓ Responsive Layouts</li>
+                    <li style="padding: 6px 0;">✓ Interactive JavaScript</li>
+                    <li style="padding: 6px 0;">✓ Full Documentation</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>Food Donation and Distribution Management System</strong></p>
+            <p style="margin-top: 8px; opacity: 0.8;">Component-Based Architecture • Built with HTML, CSS & JavaScript</p>
+            <p style="margin-top: 16px; font-size: 0.875rem; opacity: 0.7;">Created: January 8, 2026</p>
+        </div>
+    </div>
+</body>
+</html>

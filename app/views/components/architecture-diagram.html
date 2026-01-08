@@ -1,0 +1,349 @@
+<!--
+Component Architecture Diagram
+Food Donation Management System - Admin Module
+
+This SVG provides a visual overview of the component architecture
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Component Architecture - Visual Diagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 40px;
+            background: #f3f4f6;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2D6A4F;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+        }
+        .architecture {
+            display: grid;
+            gap: 20px;
+        }
+        .layer {
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            background: #f9fafb;
+        }
+        .layer-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2D6A4F;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .layer-title::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: #52B788;
+            border-radius: 2px;
+        }
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+        }
+        .component {
+            background: white;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .component:hover {
+            border-color: #52B788;
+            box-shadow: 0 4px 12px rgba(45, 106, 79, 0.1);
+            transform: translateY(-2px);
+        }
+        .component-icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+        .component-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+        .component-file {
+            font-size: 0.75rem;
+            color: #6b7280;
+            font-family: monospace;
+        }
+        .flow {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #52B788;
+            margin: 10px 0;
+        }
+        .page-structure {
+            background: linear-gradient(135deg, #2D6A4F 0%, #40916C 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+        .page-structure h3 {
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+        .code-block {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏗️ Component Architecture Overview</h1>
+
+        <!-- Design System Layer -->
+        <div class="layer">
+            <div class="layer-title">📐 Design System (Foundation)</div>
+            <div class="components-grid">
+                <div class="component">
+                    <div class="component-icon">🎨</div>
+                    <div class="component-name">CSS Reset</div>
+                    <div class="component-file">reset.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🔧</div>
+                    <div class="component-name">Variables</div>
+                    <div class="component-file">variables.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🌈</div>
+                    <div class="component-name">Colors</div>
+                    <div class="component-file">Primary, Secondary, Status</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📏</div>
+                    <div class="component-name">Spacing</div>
+                    <div class="component-file">xs, sm, md, lg, xl, 2xl</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flow">
+            <div class="flow-arrow">↓</div>
+        </div>
+
+        <!-- UI Components Layer -->
+        <div class="layer">
+            <div class="layer-title">🧩 UI Components</div>
+            <div class="components-grid">
+                <div class="component">
+                    <div class="component-icon">📊</div>
+                    <div class="component-name">Stats Card</div>
+                    <div class="component-file">stats-card.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📈</div>
+                    <div class="component-name">Charts</div>
+                    <div class="component-file">chart.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🔘</div>
+                    <div class="component-name">Buttons</div>
+                    <div class="component-file">button.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📝</div>
+                    <div class="component-name">Forms</div>
+                    <div class="component-file">form.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📋</div>
+                    <div class="component-name">Tables</div>
+                    <div class="component-file">table.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🃏</div>
+                    <div class="component-name">Cards</div>
+                    <div class="component-file">card.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">⚠️</div>
+                    <div class="component-name">Alerts</div>
+                    <div class="component-file">card.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🔔</div>
+                    <div class="component-name">Modals</div>
+                    <div class="component-file">modal.css</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flow">
+            <div class="flow-arrow">↓</div>
+        </div>
+
+        <!-- Layout Components Layer -->
+        <div class="layer">
+            <div class="layer-title">🏗️ Layout Components</div>
+            <div class="components-grid">
+                <div class="component">
+                    <div class="component-icon">📱</div>
+                    <div class="component-name">Sidebar</div>
+                    <div class="component-file">sidebar.php / sidebar.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🔝</div>
+                    <div class="component-name">Header</div>
+                    <div class="component-file">header.php / header.css</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📐</div>
+                    <div class="component-name">Admin Layout</div>
+                    <div class="component-file">admin-layout.css</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flow">
+            <div class="flow-arrow">↓</div>
+        </div>
+
+        <!-- Pages Layer -->
+        <div class="layer">
+            <div class="layer-title">📄 Pages</div>
+            <div class="components-grid">
+                <div class="component">
+                    <div class="component-icon">🏠</div>
+                    <div class="component-name">Dashboard</div>
+                    <div class="component-file">dashboard.php</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🚚</div>
+                    <div class="component-name">Distribution</div>
+                    <div class="component-file">distribution.php</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📚</div>
+                    <div class="component-name">Component Library</div>
+                    <div class="component-file">component-library.html</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactivity Layer -->
+        <div class="layer" style="margin-top: 20px;">
+            <div class="layer-title">⚡ Interactivity</div>
+            <div class="components-grid">
+                <div class="component">
+                    <div class="component-icon">🎬</div>
+                    <div class="component-name">Animations</div>
+                    <div class="component-file">Stats, Charts</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">📱</div>
+                    <div class="component-name">Mobile Toggle</div>
+                    <div class="component-file">Sidebar</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🔔</div>
+                    <div class="component-name">Notifications</div>
+                    <div class="component-file">Toast, Alerts</div>
+                </div>
+                <div class="component">
+                    <div class="component-icon">🛠️</div>
+                    <div class="component-name">Utilities</div>
+                    <div class="component-file">admin-dashboard.js</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page Structure Example -->
+        <div class="page-structure">
+            <h3>📄 Typical Page Structure</h3>
+            <div class="code-block">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;!-- CSS Layer 1: Foundation --&gt;
+    &lt;link href="reset.css"&gt;
+    &lt;link href="variables.css"&gt;
+    
+    &lt;!-- CSS Layer 2: Components --&gt;
+    &lt;link href="sidebar.css"&gt;
+    &lt;link href="header.css"&gt;
+    &lt;link href="stats-card.css"&gt;
+    
+    &lt;!-- CSS Layer 3: Layout --&gt;
+    &lt;link href="admin-layout.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="admin-container"&gt;
+        &lt;!-- Reusable Component --&gt;
+        &lt;?php include 'sidebar.php'; ?&gt;
+        
+        &lt;main class="main-content"&gt;
+            &lt;!-- Reusable Component --&gt;
+            &lt;?php include 'header.php'; ?&gt;
+            
+            &lt;!-- Page Content --&gt;
+            &lt;div class="dashboard-content"&gt;
+                &lt;!-- Stats Cards, Charts, Tables, etc. --&gt;
+            &lt;/div&gt;
+        &lt;/main&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- JavaScript --&gt;
+    &lt;script src="admin-dashboard.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</div>
+        </div>
+
+        <!-- Key Benefits -->
+        <div style="margin-top: 40px; padding: 24px; background: #f3f4f6; border-radius: 12px;">
+            <h3 style="color: #2D6A4F; margin-bottom: 16px; font-size: 1.5rem;">✨ Architecture Benefits</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                <div style="background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">🔄 Reusability</div>
+                    <div style="font-size: 0.875rem; color: #6b7280;">Components can be used across multiple pages</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">🎨 Consistency</div>
+                    <div style="font-size: 0.875rem; color: #6b7280;">Unified design system across all pages</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">⚡ Maintainability</div>
+                    <div style="font-size: 0.875rem; color: #6b7280;">Easy to update and maintain components</div>
+                </div>
+                <div style="background: white; padding: 16px; border-radius: 8px;">
+                    <div style="font-weight: 600; margin-bottom: 8px;">📱 Responsive</div>
+                    <div style="font-size: 0.875rem; color: #6b7280;">Mobile-first, works on all devices</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

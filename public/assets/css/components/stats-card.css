@@ -1,0 +1,110 @@
+/* Stats Card Component */
+.stats-card {
+    background: var(--color-white);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-base);
+    border: 1px solid var(--color-gray-200);
+}
+
+.stats-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.stats-card__content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+}
+
+.stats-card__info {
+    flex: 1;
+}
+
+.stats-card__title {
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-600);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--spacing-sm);
+}
+
+.stats-card__value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-gray-900);
+    margin-bottom: var(--spacing-xs);
+    line-height: 1;
+}
+
+.stats-card__change {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+}
+
+.stats-card__change--positive {
+    background: var(--color-success-light);
+    color: var(--color-primary-dark);
+}
+
+.stats-card__change--negative {
+    background: var(--color-danger-light);
+    color: var(--color-danger);
+}
+
+.stats-card__change--neutral {
+    background: var(--color-gray-100);
+    color: var(--color-gray-600);
+}
+
+.stats-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stats-card__icon--donations {
+    background: linear-gradient(135deg, rgba(82, 183, 136, 0.1) 0%, rgba(82, 183, 136, 0.2) 100%);
+    color: var(--color-secondary);
+}
+
+.stats-card__icon--meals {
+    background: linear-gradient(135deg, rgba(45, 106, 79, 0.1) 0%, rgba(45, 106, 79, 0.2) 100%);
+    color: var(--color-primary);
+}
+
+.stats-card__icon--ngos {
+    background: linear-gradient(135deg, rgba(64, 145, 108, 0.1) 0%, rgba(64, 145, 108, 0.2) 100%);
+    color: var(--color-primary-light);
+}
+
+.stats-card__icon--food {
+    background: linear-gradient(135deg, rgba(82, 183, 136, 0.1) 0%, rgba(82, 183, 136, 0.2) 100%);
+    color: var(--color-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-card {
+        padding: var(--spacing-lg);
+    }
+
+    .stats-card__value {
+        font-size: var(--font-size-2xl);
+    }
+
+    .stats-card__icon {
+        width: 40px;
+        height: 40px;
+    }
+}
