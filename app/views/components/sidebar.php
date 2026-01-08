@@ -1,3 +1,7 @@
+<?php
+// Get current path for active menu highlighting
+$current_path = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+?>
 <aside class="sidebar">
     <div class="sidebar__header">
         <div class="sidebar__logo">
@@ -11,7 +15,7 @@
 
     <nav class="sidebar__nav">
         <ul class="sidebar__menu">
-            <li class="sidebar__menu-item sidebar__menu-item--active">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/' || $current_path === '/dashboard') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/dashboard" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 4C3 3.44772 3.44772 3 4 3H7C7.55228 3 8 3.44772 8 4V7C8 7.55228 7.55228 8 7 8H4C3.44772 8 3 7.55228 3 7V4Z" stroke="currentColor" stroke-width="2"/>
@@ -23,7 +27,7 @@
                 </a>
             </li>
 
-            <li class="sidebar__menu-item">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/distribution') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/distribution" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 7L10 3L17 7M3 7L10 11M3 7V13L10 17M17 7L10 11M17 7V13L10 17M10 11V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,7 +36,7 @@
                 </a>
             </li>
 
-            <li class="sidebar__menu-item">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/centers' || $current_path === '/distribution-centers') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/centers" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M10 2C6.13401 2 3 5.13401 3 9C3 13.25 10 20 10 20C10 20 17 13.25 17 9C17 5.13401 13.866 2 10 2ZM10 11.5C8.61929 11.5 7.5 10.3807 7.5 9C7.5 7.61929 8.61929 6.5 10 6.5C11.3807 6.5 12.5 7.61929 12.5 9C12.5 10.3807 11.3807 11.5 10 11.5Z" fill="currentColor"/>
@@ -41,7 +45,7 @@
                 </a>
             </li>
 
-            <li class="sidebar__menu-item">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/reports') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/reports" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 2H4C3.44772 2 3 2.44772 3 3V17C3 17.5523 3.44772 18 4 18H16C16.5523 18 17 17.5523 17 17V8L9 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -51,7 +55,7 @@
                 </a>
             </li>
 
-            <li class="sidebar__menu-item">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/waste-reduction') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/waste-reduction" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z" fill="currentColor"/>
@@ -61,7 +65,7 @@
                 </a>
             </li>
 
-            <li class="sidebar__menu-item">
+            <li class="sidebar__menu-item <?php echo ($current_path === '/approve-users') ? 'sidebar__menu-item--active' : ''; ?>">
                 <a href="/approve-users" class="sidebar__link">
                     <svg class="sidebar__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z" stroke="currentColor" stroke-width="2"/>
