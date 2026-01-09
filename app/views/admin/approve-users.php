@@ -16,6 +16,17 @@
     <link rel="stylesheet" href="/assets/css/components/modal.css">
     <link rel="stylesheet" href="/assets/css/layouts/admin-layout.css">
     <style>
+        /* Fix layout overflow */
+        .admin-container {
+            overflow-x: hidden;
+        }
+
+        .main-content {
+            width: calc(100% - var(--sidebar-width));
+            max-width: calc(100% - var(--sidebar-width));
+            margin-left: var(--sidebar-width);
+        }
+
         /* Mobile Menu Toggle */
         .mobile-menu-toggle {
             display: none;
@@ -74,67 +85,71 @@
 
         /* Desktop Table Optimization */
         .table {
-            table-layout: auto;
+            table-layout: fixed;
             width: 100%;
         }
 
         .table__th:nth-child(1),
         .table__td:nth-child(1) {
-            min-width: 180px;
-            max-width: 200px;
+            width: 16%;
         }
 
         .table__th:nth-child(2),
         .table__td:nth-child(2) {
-            min-width: 70px;
-            width: 80px;
+            width: 8%;
         }
 
         .table__th:nth-child(3),
         .table__td:nth-child(3) {
-            min-width: 180px;
-            max-width: 220px;
+            width: 18%;
             word-break: break-word;
+            overflow-wrap: break-word;
         }
 
         .table__th:nth-child(4),
         .table__td:nth-child(4) {
-            min-width: 130px;
-            width: 140px;
+            width: 12%;
         }
 
         .table__th:nth-child(5),
         .table__td:nth-child(5) {
-            min-width: 100px;
-            width: 110px;
+            width: 10%;
         }
 
         .table__th:nth-child(6),
         .table__td:nth-child(6) {
-            min-width: 80px;
-            width: 100px;
+            width: 8%;
             text-align: center;
         }
 
         .table__th:nth-child(7),
         .table__td:nth-child(7) {
-            min-width: 90px;
-            width: 100px;
+            width: 10%;
         }
 
         .table__th:nth-child(8),
         .table__td:nth-child(8) {
-            min-width: 180px;
-            width: 200px;
+            width: 18%;
+        }
+
+        /* Ensure content wraps properly */
+        .table__td {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
         }
 
         .dashboard-content {
             max-width: 100%;
+            overflow-x: hidden;
         }
 
         .table-card {
             width: 100%;
             overflow-x: auto;
+        }
+        
+        .table-wrapper {
+            width: 100%;
         }
 
         @media (max-width: 768px) {
@@ -154,6 +169,9 @@
 
             .main-content {
                 padding-top: 70px;
+                margin-left: 0;
+                width: 100%;
+                max-width: 100%;
             }
 
             .section__title {
