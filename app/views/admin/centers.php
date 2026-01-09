@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/components/sidebar.css">
     <link rel="stylesheet" href="/assets/css/components/header.css">
     <link rel="stylesheet" href="/assets/css/components/card.css">
+    <link rel="stylesheet" href="/assets/css/components/stats-card.css">
     <link rel="stylesheet" href="/assets/css/components/button.css">
     <link rel="stylesheet" href="/assets/css/components/form.css">
     <link rel="stylesheet" href="/assets/css/components/modal.css">
