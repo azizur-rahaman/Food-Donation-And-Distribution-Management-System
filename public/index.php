@@ -9,9 +9,9 @@ $path = parse_url($request_uri, PHP_URL_PATH);
 switch ($path) {
     case '/':
     case '/index.php':
-        // Redirect to admin dashboard
-        header('Location: /admin/dashboard');
-        exit;
+        // Show home/landing page
+        include __DIR__ . '/../app/views/home.php';
+        break;
         
     case '/admin/dashboard':
         include __DIR__ . '/../app/views/admin/dashboard.php';
