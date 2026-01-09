@@ -9,37 +9,30 @@ $path = parse_url($request_uri, PHP_URL_PATH);
 switch ($path) {
     case '/':
     case '/index.php':
-        // Serve dashboard as home
-        include __DIR__ . '/../app/views/admin/dashboard.php';
-        break;
+        // Redirect to admin dashboard
+        header('Location: /admin/dashboard');
+        exit;
         
-    case '/dashboard':
     case '/admin/dashboard':
         include __DIR__ . '/../app/views/admin/dashboard.php';
         break;
         
-    case '/distribution':
     case '/admin/distribution':
         include __DIR__ . '/../app/views/admin/distribution.php';
         break;
         
-    case '/approve-users':
     case '/admin/approve-users':
         include __DIR__ . '/../app/views/admin/approve-users.php';
         break;
         
-    case '/centers':
-    case '/distribution-centers':
     case '/admin/centers':
         include __DIR__ . '/../app/views/admin/centers.php';
         break;
         
-    case '/reports':
     case '/admin/reports':
         include __DIR__ . '/../app/views/admin/reports.php';
         break;
         
-    case '/waste-reduction':
     case '/admin/waste-reduction':
         include __DIR__ . '/../app/views/admin/waste-reduction.php';
         break;
@@ -113,10 +106,10 @@ switch ($path) {
 <body>
     <h1>404</h1>
     <p>The page you are looking for does not exist.</p>
-    <a href="/">← Go to Dashboard</a>
+    <a href="/admin/dashboard">← Go to Dashboard</a>
     <div class="links">
-        <a href="/dashboard">Dashboard</a>
-        <a href="/distribution">Distribution</a>
+        <a href="/admin/dashboard">Dashboard</a>
+        <a href="/admin/distribution">Distribution</a>
         <a href="/components">Components</a>
         <a href="/architecture">Architecture</a>
     </div>
